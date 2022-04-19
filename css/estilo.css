@@ -7,6 +7,7 @@
 
 html,body,#home{
 	height: 100%;
+	overflow-x:hidden ; /*esconder a barra horizontal de rolagem da barra da pagina e p/ deixar padrao é o visible*/
 }
 
 
@@ -65,9 +66,9 @@ click e e colocando da mesma forma que o bootstrap colocou exemplo:
 /*costumizando o botão com as cores e raios desejados*/
 .btn-custom{
 	color: white;
-	border-radius: 500px;
-	-webkit-border-radius:500px;
-	-moz-border-radius:500px;
+	border-radius: 500px; /*raio da borda*/
+	-webkit-border-radius:500px; /*raio da borda do webkit*/
+	-moz-border-radius:500px; /*raio da borda do moz*/
 	text-transform: uppercase;
 	transition: background 0.4s, color 0.4s;
 	padding: 10px 20px;
@@ -91,15 +92,116 @@ click e e colocando da mesma forma que o bootstrap colocou exemplo:
 	color: black;
 }
 
+.carousel-control-next, .carousel-control-prev{
+	width: 5%;
+}
+
+
+/* estrutura de conteudo
+-----------------------------*/
+
+.caixa{
+	padding-top: 20px; /*espaço do topo -acolchoamento */
+	padding-bottom: 20px; /* estofamento de fundo - espaço de fundo*/
+}
+
+#servicos{
+	background: white;
+}
+
+#recursos {
+	color: white;
+}
+
+#servicos h2, h3{
+	color: #7c25f8;
+}
+
+#recursos h3{
+	color: #9bf0e1;
+}
+#recursos h2 {
+	color: white;
+}
+
+
+
+.albuns {
+	padding: 10px 0;
+}
+
+.rotacionar{
+	-ms-transform: rotate(30deg); /*IE9*/
+	-webkit-transform: rotate(30deg);/*chrome, safari, opera*/
+	transform: rotate(30deg);
+	/*como rodou a imagens e ficou em cima da letra, pra resolver*/
+	padding-left: 80px; /*espaço lateral*/
+}
+
+
+/*rodape*/
+footer{
+	background: black;
+	padding: 50px 0px 20px 0px;
+	position: relative; /*como a imagens da rotacao ficou em cima, para colocar em baixo*/
+
+}
+footer h4{
+	color: #919496;
+	font-size:0.8em;
+	text-transform: uppercase ;
+}
+footer .navbar-nav a{ /*formatar o link que esta nessa classe*/
+	color: white;
+	font-size: 0.8em;
+
+}
+
+
+footer .navbar-nav a:hover{ /*formatar o link que esta nessa classe*/
+	color: #9bf0e1;
+	text-decoration: none; /*tirar o _ do link ao passar o mouse*/
+
+}
+
+footer ul{
+	list-style: none ; /*para tira o marcador . em cada rede sociais*/
+}
+footer ul li {
+	float: right; /*para colocar um ao lado do outro,*/
+	margin: 0 5px;
+}
+
+
+
 /* tipografia
 -----------------------------*/
 
 h1{
-	font-weight: 900;
+	font-weight: 900;/*espessura da fonte*/
 	letter-spacing:-0.05em ; /*espaco entre as letras*/
-	margin-bottom: 50px;
+	margin-bottom: 50px; /*margem inferior*/
 	color: white;
 }
+
+h2{
+	font-size: 3em; /*tamanho da fonte*/
+	font-weight: 700; /*espessura da fonte*/
+	letter-spacing: -0.04em; /*espaçamento entre letras*/
+}
+h3{
+	font-size: 2em; /*tamanho da fonte*/
+	font-weight: 700; /*espessura da fonte*/
+	letter-spacing: -0.04em; /*espaçamento entre letras*/
+}
+
+
+
+
+
+
+
+
 
 /*copia do site bootstrap : https://getbootstrap.com/docs/4.0/layout/overview/  */
 /*Small devices (landscape phones, 576px and up)*/
